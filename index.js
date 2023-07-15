@@ -4,7 +4,6 @@ const bodyParser = require('body-parser'); // parses incoming request bodies (re
 const app = express();
 const port = 8000;
 const db = require("./config/database")
-// const { PORT, MONGODB_URL, SESSION_SECRET_KEY } = process.env;
 const expressLayouts = require('express-ejs-layouts');
 
 // used for session cookie
@@ -39,7 +38,7 @@ app.use(
       maxAge: 1000 * 60 * 100,
     },
     store: MongoStore.create({
-      mongoUrl: "mongodb://127.0.0.1:27017/employee_review_system",
+      mongoUrl: "mongodb+srv://aagm0404:Simraj0404@ers.qtqau8v.mongodb.net/?retryWrites=true&w=majority",
       autoRemove: 'disabled',
     }),
     function(err) {
